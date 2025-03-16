@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+.galeria {
+    padding: 20px;
+    h2 {
+        color: $primary-color;
+    }
+    p {
+        color: #666;
+    }
+}
