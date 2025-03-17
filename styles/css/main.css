@@ -1,7 +1,15 @@
+@font-face {
+  font-family: "Chillax";
+  src: url(/assets/fonts/Chillax-Regular.woff2) format("woff2"), url(/assets/fonts/Chillax-Regular.woff) format("woff"), url(/assets/fonts/Chillax-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Chillax", Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -20,7 +28,7 @@ body {
   }
 }
 .footer {
-  background-color: #333;
+  background-color: #000000;
   color: white;
   padding: 20px;
   text-align: center;
@@ -44,9 +52,14 @@ body {
 .footer .footer-content .social-links a {
   color: white;
   text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 .footer .footer-content .social-links a:hover {
-  text-decoration: underline;
+  opacity: 0.8;
+}
+.footer .footer-content .social-links a img {
+  width: 24px;
+  height: 24px;
 }
 .footer .footer-content a {
   color: white;
@@ -57,7 +70,7 @@ body {
 }
 
 .navbar {
-  background-color: #333;
+  background-color: #000000;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -86,7 +99,7 @@ body {
   transition: color 0.3s ease;
 }
 .navbar .navbar-links li a:hover {
-  color: #ddd;
+  color: #B0E6ED;
 }
 
 @media (max-width: 768px) {
@@ -141,7 +154,7 @@ body {
   padding: 20px;
 }
 .servicios h1 {
-  color: #333;
+  color: #000000;
 }
 .servicios .service-list {
   display: grid;
@@ -156,7 +169,7 @@ body {
   text-align: center;
 }
 .servicios .service-list .service h3 {
-  color: #333;
+  color: #000000;
 }
 .servicios .service-list .service p {
   color: #666;
@@ -166,7 +179,7 @@ body {
   padding: 20px;
 }
 .sobrenosotros h1 {
-  color: #333;
+  color: #000000;
 }
 .sobrenosotros p {
   font-size: 1.1rem;
@@ -189,7 +202,7 @@ body {
 }
 .sobrenosotros .team .member h3 {
   margin: 10px 0 5px;
-  color: #333;
+  color: #000000;
 }
 .sobrenosotros .team .member p {
   color: #888;
@@ -199,7 +212,7 @@ body {
   padding: 20px;
 }
 .contacto h1 {
-  color: #333;
+  color: #000000;
 }
 .contacto form {
   max-width: 600px;
@@ -218,7 +231,7 @@ body {
   border-radius: 4px;
 }
 .contacto form button {
-  background-color: #333;
+  background-color: #000000;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -226,14 +239,14 @@ body {
   cursor: pointer;
 }
 .contacto form button:hover {
-  background-color: rgb(25.5, 25.5, 25.5);
+  background-color: hsl(0, 0%, -10%);
 }
 
 .galeria {
   padding: 20px;
 }
 .galeria h2 {
-  color: #333;
+  color: #000000;
 }
 .galeria p {
   color: #666;
