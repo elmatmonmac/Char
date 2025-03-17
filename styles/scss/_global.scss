@@ -24,7 +24,7 @@ body {
     }
 }
 
-// _footer.scss //
+
 .footer {
     background-color: $primary-color;
     color: white;
@@ -47,12 +47,19 @@ body {
         .social-links {
             display: flex;
             gap: 15px;
+
             a {
                 color: white;
                 text-decoration: none;
+                transition: opacity 0.3s ease;
 
                 &:hover {
-                    text-decoration: underline;
+                    opacity: 0.8;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
                 }
             }
         }
