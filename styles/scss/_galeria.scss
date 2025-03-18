@@ -1,6 +1,6 @@
 @use 'variables' as *;
 
-.gallery {
+.galeria {
     padding: 20px;
     text-align: center;
 
@@ -10,14 +10,15 @@
         margin-bottom: 20px;
     }
 
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        gap: 5px;
+    .galeria-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
 
         img {
-            width: 80px;
-            height: 80px;
+            width: 200px;
+            height: 200px;
             object-fit: cover;
             border-radius: 8px;
             transition: transform 0.3s ease;

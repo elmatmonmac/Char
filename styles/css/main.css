@@ -61,12 +61,13 @@ body {
   width: 24px;
   height: 24px;
 }
-.footer .footer-content a {
+.footer .footer-content a[href^="mailto:"] {
   color: white;
   text-decoration: none;
 }
-.footer .footer-content a:hover {
-  text-decoration: underline;
+.footer .footer-content a[href^="mailto:"]:hover {
+  color: #ca7cd5;
+  text-decoration: none;
 }
 
 h1 {
@@ -120,7 +121,7 @@ a:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navbar .navbar-brand {
-  color: white;
+  color: #ca7cd5;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
@@ -134,47 +135,38 @@ a:hover {
 .navbar .navbar-links li {
   margin-left: 20px;
 }
+.navbar .navbar-links li:nth-child(1) a {
+  color: #05ecff;
+}
+.navbar .navbar-links li:nth-child(2) a {
+  color: #05ffd6;
+}
+.navbar .navbar-links li:nth-child(3) a {
+  color: #ca7cd5;
+}
+.navbar .navbar-links li:nth-child(4) a {
+  color: #05ecff;
+}
 .navbar .navbar-links li a {
-  color: white;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 .navbar .navbar-links li a:hover {
-  color: #B0E6ED;
+  color: #b0e6ed;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navbar .navbar-links {
-    flex-direction: column;
-    width: 100%;
-  }
-  .navbar .navbar-links li {
-    margin: 10px 0;
-  }
-  .navbar .navbar-links li a {
-    display: block;
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-}
 .container {
   display: flex;
   padding: 20px;
   align-items: center;
 }
 .container .left {
-  flex: 0 0 auto;
-  max-width: 100%;
+  flex: 0 0 40%;
 }
 .container .left img {
   width: 100%;
   height: auto;
-  max-width: 900px;
   border-radius: 8px;
 }
 .container .right {
@@ -182,79 +174,99 @@ a:hover {
   padding-left: 20px;
 }
 .container .right h1 {
+  color: #05ecff;
+  font-size: 40px;
   margin-top: 0;
-  font-size: 18px;
-  color: #333;
 }
 .container .right p {
-  font-size: 14px;
-  color: #666;
+  color: #ffffff;
+  font-size: 16px;
   line-height: 1.6;
 }
 
 .servicios {
   padding: 20px;
+  text-align: center;
 }
 .servicios h1 {
-  color: #000000;
+  color: #05ecff;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 .servicios .service-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin-top: 20px;
 }
 .servicios .service-list .service {
-  background-color: #f9f9f9;
+  background-color: #BABABA;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
 }
 .servicios .service-list .service h3 {
-  color: #000000;
+  color: #ca7cd5;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 .servicios .service-list .service p {
-  color: #666;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .sobrenosotros {
   padding: 20px;
+  text-align: center;
 }
 .sobrenosotros h1 {
-  color: #000000;
+  color: #05ecff;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 .sobrenosotros p {
-  font-size: 1.1rem;
-  color: #666;
+  color: #ffffff;
+  font-size: 16px;
   line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .sobrenosotros .team {
   display: flex;
+  justify-content: center;
   gap: 20px;
   margin-top: 20px;
 }
+.sobrenosotros .team .member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .sobrenosotros .team .member {
-  flex: 1;
   text-align: center;
 }
 .sobrenosotros .team .member img {
-  width: 100%;
-  max-width: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
 .sobrenosotros .team .member h3 {
+  color: #05ffd6;
   margin: 10px 0 5px;
-  color: #000000;
 }
 .sobrenosotros .team .member p {
-  color: #888;
+  color: #ffffff;
 }
 
 .contacto {
   padding: 20px;
+  text-align: center;
 }
 .contacto h1 {
-  color: #000000;
+  color: #05ecff;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 .contacto form {
   max-width: 600px;
@@ -263,7 +275,8 @@ a:hover {
 .contacto form label {
   display: block;
   margin-bottom: 8px;
-  color: #333;
+  color: #ffffff;
+  font-size: 16px;
 }
 .contacto form input, .contacto form textarea {
   width: 100%;
@@ -271,41 +284,45 @@ a:hover {
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 16px;
 }
 .contacto form button {
-  background-color: #000000;
-  color: white;
+  background-color: #05ecff;
+  color: #ffffff;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 .contacto form button:hover {
-  background-color: hsl(0, 0%, -10%);
+  background-color: #05ecff;
 }
 
-.gallery {
+.galeria {
   padding: 20px;
   text-align: center;
 }
-.gallery h1 {
+.galeria h1 {
   color: #05ecff;
   font-size: 40px;
   margin-bottom: 20px;
 }
-.gallery .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 5px;
+.galeria .galeria-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.gallery .gallery-grid img {
-  width: 80px;
-  height: 80px;
+.galeria .galeria-grid img {
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
-.gallery .gallery-grid img:hover {
+.galeria .galeria-grid img:hover {
   transform: scale(1.1);
 }
 
