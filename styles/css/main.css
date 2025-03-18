@@ -69,6 +69,48 @@ body {
   text-decoration: underline;
 }
 
+h1 {
+  color: #05ecff;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #05ffd6;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #ca7cd5;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  color: #b0e6ed;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+p.highlight {
+  color: #05ecff;
+}
+
+a {
+  color: #05ffd6;
+  text-decoration: none;
+}
+a:hover {
+  color: #ca7cd5;
+}
+
 .navbar {
   background-color: #000000;
   padding: 10px 20px;
@@ -242,14 +284,29 @@ body {
   background-color: hsl(0, 0%, -10%);
 }
 
-.galeria {
+.gallery {
   padding: 20px;
+  text-align: center;
 }
-.galeria h2 {
-  color: #000000;
+.gallery h1 {
+  color: #05ecff;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
-.galeria p {
-  color: #666;
+.gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 5px;
+}
+.gallery .gallery-grid img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.gallery .gallery-grid img:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=main.css.map */
