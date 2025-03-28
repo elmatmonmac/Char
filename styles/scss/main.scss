@@ -1,8 +1,7 @@
 @use 'partials/variables' as *;
 @use 'partials/navbar';
-@use 'partials/footer';
-@use 'partials/home';
-@use 'partials/services';
-@use 'partials/about';
-@use 'partials/contact';
-@use 'partials/gallery';
+@use 'partials/index';
+@use 'partials/servicios';
+@use 'partials/sobre';
+@use 'partials/contacto';
+@use 'partials/galeria';
