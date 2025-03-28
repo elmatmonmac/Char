@@ -1,8 +1,8 @@
-@use 'variables' as *;
-@use 'global';
-@use 'navbar';
-@use 'inicio';
-@use 'servicios';
-@use 'sobre';
-@use 'contacto';
-@use 'galeria';
+@use 'partials/variables' as *;
+@use 'partials/navbar';
+@use 'partials/footer';
+@use 'partials/home';
+@use 'partials/services';
+@use 'partials/about';
+@use 'partials/contact';
+@use 'partials/gallery';
