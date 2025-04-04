@@ -1,9 +1,0 @@
-{
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/$1.html",
-        "headers": { "Cache-Control": "no-cache" }
-      }
-    ]
-  }
