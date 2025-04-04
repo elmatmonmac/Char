@@ -1,6 +1,9 @@
 {
-    "rewrites": [
-        { "source": "/about", "destination": "/about.html" },
-        { "source": "/contact", "destination": "/contact.html" }
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/$1.html",
+        "headers": { "Cache-Control": "no-cache" }
+      }
     ]
-}
+  }
